@@ -12,14 +12,23 @@ const quotes = [
 ];
 
 // Create the getRandomQuuote function and name it getRandomQuote
-function getRandomQuote (array) {
-        let randomValue = quotes[Math.floor(Math.random()*quotes.length)];
-        return randomValue;
-}
-// Create the printQuote funtion and name it printQuote
+const getRandomQuote = (array) => let randomValue = quotes[Math.floor(Math.random()*quotes.length)];
+
+// Global declaration
 let theString;
-var aux
-function printQuote () {
+let aux;
+
+//Random background color
+const randomColor = () => {
+  var r = Math.floor(Math.random() * 256);
+  var g = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+  var rndColor = "rgb("+ r +"," + g + "," + b + ")";
+  document.body.style.backgroundColor = rndColor;
+}
+
+// Create the printQuote function
+const printQuote = () => {
    aux = getRandomQuote(quotes);
    theString = '<p class="quote">' + aux.quote + '</p>';
    theString = theString +'<p class="source">' + aux.source;
@@ -37,23 +46,14 @@ function printQuote () {
    document.getElementById('quote-box').innerHTML = theString;
    randomColor();
 }
-//Random background color
-function randomColor () {
-  var r = Math.floor(Math.random() * 256);
-  var g = Math.floor(Math.random() * 256);
-  var b = Math.floor(Math.random() * 256);
-  var rndColor = "rgb("+ r +"," + g + "," + b + ")";
-  document.body.style.backgroundColor = rndColor;
-}
+
 
 // Auto-refresh evert 10 seconds
 var intervalId = window.setInterval(printQuote, 10000)
 
 //Reset timer
-function timeOut() {
-  window.clearTimeout(intervalId);
-}
+const timeOut = () => window.clearTimeout(intervalId);
+
 
 // This event listener will respond to "Show another quote" button clicks
-// when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);

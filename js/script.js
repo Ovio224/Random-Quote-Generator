@@ -35,6 +35,17 @@ function printQuote () {
      theString = theString + '</p>';
    }
    document.getElementById('quote-box').innerHTML = theString;
+   randomColor();
+}
+
+//Random background color
+
+function randomColor () {
+  var r = Math.floor(Math.random() * 256);
+  var g = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+  var rndColor = "rgb("+ r +"," + g + "," + b + ")";
+  document.body.style.backgroundColor = rndColor;
 }
 
 // This event listener will respond to "Show another quote" button clicks

@@ -12,7 +12,7 @@ const quotes = [
 ];
 
 // Create the getRandomQuuote function and name it getRandomQuote
-const getRandomQuote = (array) => let randomValue = quotes[Math.floor(Math.random()*quotes.length)];
+const getRandomQuote = array => let randomValue = quotes[Math.floor(Math.random()*quotes.length)];
 
 // Global declaration
 let theString;

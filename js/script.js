@@ -1,6 +1,7 @@
 // FSJS - Random Quote Generator
 // Create the array of quote objects and name it quotes
 const quotes = [
+    { quote: "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it", source: "Patrick McKenzie"},
     { quote: "Don't cry because it's over, smile because it happened.", source: "Dr. Seuss"},
     { quote: "Be yourself, everyone else is already taken.", source: "Oscar Wilde"},
     { quote: "Two things are infinite: the universe and human stupidity, and I'm not sure about the universe. ", source: "Albert Einstein", tag: "humble"},

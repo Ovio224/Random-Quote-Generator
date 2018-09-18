@@ -56,6 +56,7 @@ function getRandomQuote(array) {
 // Global declaration
 let theString;
 let aux;
+const buttonColor = document.getElementById("loadQuote");
 
 //Random background color
 const randomColor = () => {
@@ -64,6 +65,7 @@ const randomColor = () => {
   var b = Math.floor(Math.random() * 256);
   var rndColor = "rgb(" + r + "," + g + "," + b + ")";
   document.body.style.backgroundColor = rndColor;
+  buttonColor = rndColor;
 };
 
 // Create the printQuote function
